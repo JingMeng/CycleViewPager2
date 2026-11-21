@@ -2,11 +2,15 @@ apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
 
-apply plugin: 'kotlin-android-extensions'
 
 android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions { jvmTarget = '11' }
+    namespace 'com.wangpeiyuan.cycleviewpager2.simple'
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
     defaultConfig {
         applicationId "com.wangpeiyuan.cycleviewpager2.simple"
         minSdkVersion rootProject.ext.minSdkVersion
@@ -37,3 +41,5 @@ dependencies {
     androidTestImplementation deps.testJunitExt
     androidTestImplementation deps.testEspresso
 }
+
+

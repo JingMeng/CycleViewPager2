@@ -1,13 +1,16 @@
 apply plugin: 'com.android.library'
 
 // JitPack Maven
-apply plugin: 'com.github.dcendents.android-maven'
 // Your Group
 group='com.github.wangpeiyuan'
 
 android {
+    namespace 'com.wangpeiyuan.cycleviewpager2'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
 
 
     defaultConfig {
